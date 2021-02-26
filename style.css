@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* font-family: 'Crimson Pro', serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif; */
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color:#ffffff;
+    height: 100vh;
+}
+.container{
+    padding: 1em;
+}
+.row{
+    max-width:1550px;
+    width:90%;
+    margin: 0 auto;
+}
+header{
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.brand{
+    font-family: 'Crimson Pro', serif;
+    font-weight: 200;
+    font-size:14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    border:1px solid;
+}
+.menu{
+    margin-left: auto;
+    position:relative;
+    height:25px;
+    width:25px;
+}
+.hide__menu,.show__menu{
+    position:absolute;
+    top:0;
+    left:0;
+}
+.hide__menu{
+    display: none;
+}
+.menu:hover{
+    cursor: pointer;
+}
+nav{
+    flex-basis: 100%;
+    height: 100vh;
+    display: none;
+}
+nav ul{
+    display:flex;
+    flex-direction: column;
+    margin-top: 30vh;
+}
+nav li{
+    text-align: center;
+    margin-top: 1em;
+}
+nav a{
+    display:inline-block;
+    padding: 0.5em;
+    font-size:18px;
+    line-height: 22px;
+}
+nav li.active a{
+    font-weight: bold;
+    border-bottom:2px solid #ffffff;
+}
+ .hero__image img{
+    width:100%;
+    max-width: 100%;
+} 
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.hero__title{
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-style:normal;
+    font-size:36px;
+    line-height: 46.08px;
+    margin-bottom: 1em;
+}
+.hero__message,.hero__cta{
+    font-weight: 400;
+    font-style:normal;
+    font-size: 14px;
+    line-height: 17.07px;
+    margin-bottom: 1em;
+}
+.hero__cta svg{
+    fill:white;
+    vertical-align: middle;
+}
+.hero__card{
+     width:80%;
+     margin: -60px auto 0 auto;
+     background-color: #000000;
+     position: relative;
+     z-index: 1;
+     padding:1em 2em;
+     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+.card__profile{
+    display: flex;
+    align-items: center;
+}
+.profile__pic{
+    flex:0 0 20%;
+}
+.profile__pic img{
+    border-radius: 50%;
+}
+.profile__details{
+    flex:1 0 80%;
+    display:flex;
+    flex-direction: column;
+}
+.profile__name{
+    font-weight: 500;
+    font-size:12px;
+    line-height: 15px;
+    padding-left: 10px;
+}
+.job__role{
+    font-weight: 500;
+    font-size:10px;
+    line-height: 12px;
+    color: #828282;
+    padding-left: 10px;
+}
+.card__description{
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style:normal;
+    font-size:18px;
+    line-height: 23.04px;
+}
+
+@media screen and (min-width:567px){
+    header{
+        padding: 2em 0;
+        flex-wrap:nowrap;
+        justify-content:space-around;
+        margin-bottom: 1em;
+    }
+   nav{
+        display: block;
+        flex-basis: auto;
+        height: auto;
+    }
+    
+    .menu{
+        margin-left: 0;
+        display: none;
+    }
+    nav ul{
+        flex-direction: row;
+        margin-top: 0;
+    }
+    nav li{
+        margin-top: 0;
+        margin-left: 0.25em;
+    }
+    nav a{
+        font-size:16px;
+    }
+    .hero__card{
+        margin-right: 20px;
+
+    }
+}
+@media screen and (min-width:768px){
+    header{
+        justify-content: space-between;
+        margin-bottom: 2em;
+    }
+    .hero__section{
+        display:flex;
+        align-items: center;
+        padding: 1em;
+    }
+    
+    .hero__text{
+        flex-basis:60%;
+    }
+    .hero__image{
+        flex-basis: 40%;
+    }
+    .hero__title{
+        font-size: 48px;
+        line-height: 61px;
+    }
+    .hero__message{
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .hero__cta{
+        font-size:18px;
+        line-height: 22px;
+    }
+    .profile__name{
+        font-size:14px;
+        list-style: 17px;
+    }
+    .job__role{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .card__description{
+        font-size:24px;
+        line-height: 31px;
+    }
+    
+}
+@media screen and (min-width:990px){
+    header{
+        padding: 1em;
+        margin-bottom: 3em;
+    } 
+    .hero__section{
+        padding: 2em;
+    }
+    .hero__text,.hero__image{
+        flex:50%;
+    }
+     .hero__card{
+        width:50%;
+    } 
+}
